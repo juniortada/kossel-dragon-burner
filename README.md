@@ -20,9 +20,9 @@ configuração bowden.
   O effector encaixa por cima com o conector já no lugar, e o PTFE desce pelo furo direto até o conector. Ø17 passa
   um sextavado de 14 mm (16,2 mm nas pontas: PC4-M10, PC4-01); para outro conector, mude `connector_clear_d`.
 - **Variantes para hotend sem conector no corpo** (`ptfe_fitting` no fonte): o PTFE atravessa o effector por um
-  furo de Ø4,3 e desce até o dissipador, e o engate rosqueia no topo do effector, numa rosca impressa M10x1
-  (PC4-M10, 9 mm de profundidade) ou M6x1 (PC4-M6, 7 mm), com chanfro de 0,8 mm na entrada. Fora do eixo, a peça
-  é a mesma da versão com furo de Ø17.
+  furo de Ø4,6 (com folga: quem segura o tubo é o engate) e desce até o dissipador. O engate rosqueia no topo do
+  effector, numa rosca impressa M10x1 (PC4-M10, 9 mm de profundidade) ou M6x1 (PC4-M6, 7 mm), com chanfro de
+  0,8 mm na entrada. Fora do eixo, a peça é a mesma da versão com furo de Ø17.
 
   ![corte da variante PC4-M10](images/corte_pc4_m10.png)
 - **Atrás**, uma placa vertical copia a face do carrinho X do Voron V0.2, para o qual o Dragon Burner foi desenhado:
@@ -71,8 +71,8 @@ O cálculo está em `tools/pattern_fit.py`.
   câmara fria.
 - **De cabeça para baixo**: a face de cima do effector na mesa e a placa para cima (`images/impressao.png`). Não
   precisa de suporte; a maior ponte tem 12 mm, onde o bloco cruza o vão dos ressaltos A/B.
-- 4 perímetros, 40% de preenchimento. Volume sólido: 31,9 cm³ (≈33 g de ABS a 100%); variantes PC4-M10 34,5 cm³
-  e PC4-M6 35,0 cm³.
+- 4 perímetros, 40% de preenchimento. Volume sólido: 32,1 cm³ (≈33 g de ABS a 100%); variantes PC4-M10 34,7 cm³
+  e PC4-M6 35,1 cm³.
 - Nas variantes PC4, a rosca começa na primeira camada; o chanfro da entrada absorve o esmagamento dela. A rosca
   tem 0,3 mm de folga no diâmetro (`thread_clearance`): se o engate entrar duro, rosqueie devagar (o latão abre a
   rosca no plástico) ou passe um macho M10x1 / M6x1; se ficar folgado, reduza a folga e reimprima.
@@ -110,7 +110,7 @@ Os furos dos M3x35 atravessam a placa. Se preferir porca a inserto, use M3x40 co
 4. Aperte os 2 × M3x35 pela frente da carenagem.
 5. Por trás: 2 × M3x25 nos furos rebaixados de cima e 2 × M3x10 nas pernas.
 6. Desça o PTFE pelo furo central até o conector do hotend.
-7. Leve os fios pela traseira da placa e prenda com abraçadeiras nas janelas das pernas.
+7. Leve os fios pela traseira da placa.
 
 Nas variantes PC4, o hotend vai sem conector (passos 2, 3 e 6). Depois do passo 5, rosqueie o engate no topo do
 effector, passe o PTFE por ele até encostar no fundo do dissipador (no heatbreak) e, empurrando o tubo para baixo,
@@ -154,8 +154,8 @@ Tudo com as peças reais (STL do remix e STEP do Dragon Burner v8), no referenci
   dessa esfera (com raio de 8,1 mm já tocaria).
 - **Paredes, fatiando de cabeça para baixo com camadas de 0,2 mm:** nenhuma abaixo de 0,9 mm. Ao lado dos
   rebaixos dos M3x25 a placa alarga até onde as terminações da torre C permitem, e a parede fica com 2,4 mm ou
-  mais. Os pontos mais finos da peça são a frente do bloco, junto ao furo do conector (1,1 mm), a parede do inserto
-  do M3x35 junto à ventoinha (1,15 mm) e as janelas das abraçadeiras (1,5 mm).
+  mais. Os pontos mais finos da peça são a frente do bloco, junto ao furo do conector (1,1 mm), e a parede do
+  inserto do M3x35 junto à ventoinha (1,15 mm).
 - **Juntas:** idênticas ao `effector.scad` original. Do original só mudou o furo central: era Ø16 em cima e
   rosca M5 embaixo, agora é passante de Ø17.
 - **Furo do conector:** o topo do V6 fica 0,6 mm abaixo do topo do suporte do hotend, então o sextavado do
@@ -164,7 +164,7 @@ Tudo com as peças reais (STL do remix e STEP do Dragon Burner v8), no referenci
   e os M3x25.
 - **Variantes PC4:** comparadas malha a malha com a versão base, só ganham material dentro do antigo furo de Ø17,
   sem perder nada, e esse material não toca nenhuma peça do toolhead; as folgas acima valem para elas. Fatiando a
-  rosca: M10x1 de Ø9,22 a 10,30 (M6x1: 5,22 a 6,30), passo de 1 mm, à direita; abaixo dela, Ø4,3 até o fundo do
+  rosca: M10x1 de Ø9,22 a 10,30 (M6x1: 5,22 a 6,30), passo de 1 mm, à direita; abaixo dela, Ø4,6 até o fundo do
   bloco. Paredes: nenhuma abaixo de 0,9 mm.
 
 Ainda não verificado:

@@ -93,7 +93,7 @@ ptfe_fitting = "none";  // [none, PC4-M10, PC4-M6]
 // 17 clears a 14 mm hex across the corners (16.2: PC4-M10, PC4-01).
 connector_clear_d = 17;
 
-ptfe_clear_d = 4.3;  // 4 mm PTFE tube.
+ptfe_clear_d = 4.6;  // 4 mm PTFE tube, loose: the fitting holds it.
 // Fitting thread: major diameter, pitch, depth from the effector top.
 fitting_thread = ptfe_fitting == "PC4-M10" ? [10, 1, 9] : [6, 1, 7];
 thread_clearance = 0.3;  // On the diameter, for a printed thread.
@@ -198,9 +198,6 @@ module toolhead_mount() {
     for (s = [-1, 1]) scale([s, 1, 1])
       translate([fan_inner_x - fan_clearance, face_y - 1, fan_z[0] - fan_clearance])
         cube([20, fan_rear_y + fan_clearance - face_y + 1, fan_z[1] - fan_z[0] + 2*fan_clearance]);
-    // Zip tie windows across the legs for the toolhead wiring.
-    for (s = [-1, 1]) translate([s*duct_screw_x, (fan_rear_y + fan_clearance + plate_rear_y)/2, 32])
-      cube([leg_w + 2, 2.6, 3.2], center=true);
     // Chamfer the back of the leg ends.
     for (s = [-1, 1]) translate([s*duct_screw_x, plate_rear_y, leg_bottom_z])
       rotate([45, 0, 0]) cube([leg_w + 2, 3, 3], center=true);
