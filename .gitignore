@@ -1,0 +1,7 @@
+# Upstream clones and downloads: see "Créditos e licença" in the README.
+vendor/kossel/
+vendor/chirpy2605-voron/
+vendor/printables-822570/
+parts/*.stl
+!parts/dragon_burner_bltouch_*.stl
+__pycache__/
